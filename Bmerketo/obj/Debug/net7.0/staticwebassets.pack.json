@@ -1,0 +1,81 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Bmerketo.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Bmerketo.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\120x113.svg",
+      "PackagePath": "staticwebassets\\images\\120x113.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\1920x300.svg",
+      "PackagePath": "staticwebassets\\images\\1920x300.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\200x122.svg",
+      "PackagePath": "staticwebassets\\images\\200x122.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\270x295.svg",
+      "PackagePath": "staticwebassets\\images\\270x295.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\369x310.svg",
+      "PackagePath": "staticwebassets\\images\\369x310.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\370x295.svg",
+      "PackagePath": "staticwebassets\\images\\370x295.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\469x356.svg",
+      "PackagePath": "staticwebassets\\images\\469x356.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\501x430.svg",
+      "PackagePath": "staticwebassets\\images\\501x430.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\625x647.svg",
+      "PackagePath": "staticwebassets\\images\\625x647.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\Add your image here.svg",
+      "PackagePath": "staticwebassets\\images\\Add your image here.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\Logo.svg",
+      "PackagePath": "staticwebassets\\images\\Logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Bmerketo.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Bmerketo.props",
+      "PackagePath": "build\\Bmerketo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Bmerketo.props",
+      "PackagePath": "buildMultiTargeting\\Bmerketo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Bmerketo.props",
+      "PackagePath": "buildTransitive\\Bmerketo.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

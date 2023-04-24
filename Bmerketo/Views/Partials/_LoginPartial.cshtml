@@ -1,0 +1,12 @@
+﻿@if (signInManager.IsSignedIn(User))
+{
+	<p>Logged in as: @User.Identity?.Name</p>
+	<a asp-action="Index" asp-controller="Logout">LOG OUT</a>
+}
+
+else
+{
+	<a class="link" href="./Login">LOGIN</a>
+	<a class="link" href="./register">REGISTER</a>
+}
+

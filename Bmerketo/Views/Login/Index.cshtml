@@ -1,0 +1,40 @@
+﻿@model UserLoginViewModel
+
+<div class="register">
+    <div class="container">
+        <form method="post" class="register-form p-4 d-flex flex-column gap-3">
+
+            <p>Please Login to Your Account</p>
+
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <div class="content flex-column d-flex w-100">
+                <label asp-for="Email">E-mail* <a class="m-4" href="">Don't have an account yet?</a></label>
+                <input asp-for="Email" class="w-100" type="text">
+                <small class="text-danger"><span asp-validation-for="Email"></span></small>
+            </div>
+
+            <div class="content flex-column d-flex w-100 ">
+                <label asp-for="Password" class="d-flex justify-content-between">Password*<a href="">Forgot Your Password?</a></label>
+                <input asp-for="Password" class="w-100" type="text">
+                <small class="text-danger"><span asp-validation-for="Password"></span></small>
+            </div>
+
+            <button class="btn-toggle">Login</button>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+<!--
+
+            <div class="content d-flex align-items-center w-100 gap-2 mt-2 mb-2">
+                <input class="checkbox" type="checkbox">
+                <label for="confirm password">I have read and accept the terms and agreements</label>
+            </div>
+-->

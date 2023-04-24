@@ -1,0 +1,93 @@
+﻿@model UserRegistrationViewModel
+
+<!-- Register Start -->
+<div class="register">
+    <div class="container">
+        <form method="post" class="register-form p-4 d-flex flex-column gap-3">
+
+            <p>Please Register Your new Account</p>
+
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <div class="content-box d-flex gap-4 w-100">
+                <div class="content d-flex flex-column w-50">
+                    <label asp-for="FirstName">First Name*</label>
+                    <input asp-for="FirstName" type="text">
+                    <small class="text-danger"><span asp-validation-for="FirstName"></span></small>
+                </div>
+                <div class="content d-flex flex-column w-50">
+                    <label asp-for="LastName">Last Name*</label>
+                    <input asp-for="LastName" type="text">
+                    <small class="text-danger"><span asp-validation-for="LastName"></span></small>
+                </div>
+            </div>
+
+            <div class="content flex-column d-flex w-100">
+                <label asp-for="StreetName">Street Name*</label>
+                <input asp-for="StreetName" class="w-100" type="text">
+                <small class="text-danger"><span asp-validation-for="StreetName"></span></small>
+            </div>
+
+            <div class="content-box d-flex gap-4 w-100">
+                <div class="content d-flex flex-column w-50">
+                    <label asp-for="PostalCode">Postal Code*</label>
+                    <input asp-for="PostalCode" type="text">
+                    <small class="text-danger"><span asp-validation-for="PostalCode"></span></small>
+                </div>
+                <div class="content d-flex flex-column w-50">
+                    <label asp-for="City">City*</label>
+                    <input asp-for="City" type="text">
+                    <small class="text-danger"><span asp-validation-for="City"></span></small>
+                </div>
+            </div>
+
+            <div class="content-box d-flex gap-4 w-100">
+                <div class="content d-flex flex-column w-50">
+                    <label asp-for="PhoneNumber">Mobile (optional)</label>
+                    <input asp-for="PhoneNumber" type="text">
+                </div>
+
+            </div>
+
+            <div class="content flex-column d-flex w-100">
+                <label asp-for="Email">Email*</label>
+                <input asp-for="Email" class="w-100" type="email">
+                <small class="text-danger"><span asp-validation-for="Email"></span></small>
+            </div>
+
+            <div class="content flex-column d-flex w-100">
+                <label asp-for="Password">Password*</label>
+                <input asp-for="Password" type="password" class="w-100">
+                <small class="text-danger"><span asp-validation-for="Password"></span></small>
+            </div>
+
+            <div class="content flex-column d-flex w-100">
+                <label asp-for="ConfirmPassword">Confirm Password*</label>
+                <input asp-for="ConfirmPassword" class="w-100" type="password">
+                <small class="text-danger"><span asp-validation-for="ConfirmPassword"></span></small>
+            </div>
+
+            <button class="btn-toggle">Submit</button>
+
+        </form>
+    </div>
+</div>
+<!-- Register End -->
+
+<!--Saved Code
+                    <div class="content d-flex flex-column w-50">
+                    <label for="company">Company (optional)</label>
+                    <input type="text">
+                </div>
+
+                            <div class="content flex-column d-flex w-100">
+                <label for="upload image">Upload Profile Image (optional)</label>
+                <input class="w-100" type="text">
+            </div>
+
+                        <div class="content d-flex align-items-center w-100 gap-2 mt-5 mb-5">
+                <input class="checkbox" type="checkbox">
+                <label for="confirm password">I have read and accept the terms and agreements</label>
+            </div>
+
+-->

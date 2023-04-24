@@ -1,0 +1,14 @@
+﻿@model ShowcaseViewModel
+
+<section class="showcase">
+    <div class="container">
+        <div class="content">
+            <div class="ingress">@Model?.Ingress</div>
+            <div class="title">@Model?.Title</div>
+            <button href="@Model?.LinkUrl" class="btn-theme">@Model?.LinkContent</button>
+        </div>
+
+        <img src="@Model?.ImageUrl" alt="@Model?.Title">
+
+    </div>
+</section>
