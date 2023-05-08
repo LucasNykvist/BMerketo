@@ -1,4 +1,5 @@
-﻿using Bmerketo.Models.Identity;
+﻿using Bmerketo.Models.Entities;
+using Bmerketo.Models.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,5 +10,7 @@ namespace Bmerketo.Contexts
 		public IdentityContext(DbContextOptions<IdentityContext> options) : base(options)
 		{
 		}
+
+		public DbSet<ProductEntity> Products { get; set; }
 	}
 }
