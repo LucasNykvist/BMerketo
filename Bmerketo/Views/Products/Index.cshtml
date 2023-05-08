@@ -1,0 +1,17 @@
+﻿@{
+	ViewData["Title"] = "All Products";
+
+	var products = await productService.GetAllAsync();
+}
+
+@if (products != null)
+{
+	foreach (var product in products)
+	{
+		<div>Product ID: @product.Id</div>
+		<img src="@product.Image" class="product-img" />
+		<div>@product.Name</div>
+		<div>@product.Description</div>
+		<div>@product.Price</div>
+	}
+}

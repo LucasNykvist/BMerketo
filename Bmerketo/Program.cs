@@ -1,5 +1,6 @@
 using Bmerketo.Contexts;
 using Bmerketo.Models.Identity;
+using Bmerketo.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +14,8 @@ builder.Services.AddIdentity<CustomIdentityUser, IdentityRole>(x =>
 	x.User.RequireUniqueEmail= true;
 	x.Password.RequiredLength= 8;
 }).AddEntityFrameworkStores<IdentityContext>();
+
+builder.Services.AddScoped<ProductService>();
 
 var app = builder.Build();
 app.UseHsts();

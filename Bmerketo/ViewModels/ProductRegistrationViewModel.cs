@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Bmerketo.Models.Entities;
 
 namespace Bmerketo.ViewModels
 {
@@ -15,10 +16,21 @@ namespace Bmerketo.ViewModels
 		[Display(Name = "Product Price *")]
 		[Required(ErrorMessage = "Product Price Required")]
 		[DataType(DataType.Currency)]
-		public string Price { get; set; } = null!;
+		public decimal Price { get; set; }
 
 		[Display(Name = "Product Image *")]
 		[Required(ErrorMessage = "Product Image Required")]
 		public string Image { get; set; } = null!;
+
+		public static implicit operator ProductEntity(ProductRegistrationViewModel viewModel)
+		{
+			return new ProductEntity
+			{
+				Name = viewModel.Name,
+				Description = viewModel.Description,
+				Price = viewModel.Price,
+				Image = viewModel.Image
+			};
+		}
 	}
 }

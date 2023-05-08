@@ -3,6 +3,8 @@
 @using Bmerketo.ViewModels
 @using Bmerketo.Models.Identity
 @using Microsoft.AspNetCore.Identity
+@using Bmerketo.Services;
+@inject ProductService productService;
 
 @inject SignInManager<CustomIdentityUser> signInManager
 @inject UserManager<CustomIdentityUser> userManager

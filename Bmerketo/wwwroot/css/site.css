@@ -935,4 +935,9 @@ footer {
         .register .container .register-form .btn-toggle:hover {
             background-color: #000000;
         }
+
+.product-img{
+    width: 100px;
+    height: 100px
+}
 /*# sourceMappingURL=style.css.map */
