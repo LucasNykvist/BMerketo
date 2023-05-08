@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 using Bmerketo.Models.Identity;
 
 namespace Bmerketo.ViewModels
@@ -6,28 +7,33 @@ namespace Bmerketo.ViewModels
 	public class UserRegistrationViewModel
 	{
 		[Display(Name = "First Name")]
-		[Required(ErrorMessage = "First Name is required")]
+		[Required(ErrorMessage = "First Name Is Required")]
+		[RegularExpression(@"^[a-öA-Ö]+(?:[ é'-][a-öA-Ö]+)*$", ErrorMessage = "Invalid First Name")]
 		public string FirstName { get; set; } = null!;
 
 		[Display(Name = "Last Name")]
-		[Required(ErrorMessage = "Last Name is required")]
+		[Required(ErrorMessage = "Last Name Is Required")]
+		[RegularExpression(@"^[a-öA-Ö]+(?:[ é'-][a-öA-Ö]+)*$", ErrorMessage = "Invalid Last Name")]
 		public string LastName { get; set; } = null!;
 
 		[Display(Name = "E-mail Address")]
-		[Required(ErrorMessage = "E-mail is required")]
+		[Required(ErrorMessage = "E-mail Is Required")]
 		[DataType(DataType.EmailAddress)]
+		[RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", ErrorMessage = "Invalid E-mail Address")]
+
 		public string Email { get; set; } = null!;
 
 		[Display(Name = "Phone Number")]
 		public string PhoneNumber { get; set; }
 
 		[Display(Name = "Password")]
-		[Required(ErrorMessage = "Password is required")]
+		[Required(ErrorMessage = "Password Is Required")]
 		[DataType(DataType.Password)]
+		[RegularExpression(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$", ErrorMessage = "Password must be atleast 8 characters long, Contain 1 uppercase and lowercase, 1 number and 1 special character such as £@$")]
 		public string Password { get; set; } = null!;
 
 		[Display(Name = "Confirm Password")]
-		[Required(ErrorMessage = "Password is required")]
+		[Required(ErrorMessage = "Password Is Required")]
 		[Compare(nameof(Password), ErrorMessage = "Passwords don't match")]
 		public string ConfirmPassword { get; set; } = null!;
 
