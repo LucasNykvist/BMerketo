@@ -1,7 +1,9 @@
 ﻿@if (signInManager.IsSignedIn(User))
 {
-	<p>Logged in as: @User.Identity?.Name</p>
-	<a asp-action="Index" asp-controller="Logout">LOG OUT</a>
+	<div class="d-flex m-0">
+		<p>Logged in as: @User.Identity?.Name</p>
+		<a asp-action="Index" asp-controller="Logout">LOG OUT</a>
+	</div>
 }
 
 else
