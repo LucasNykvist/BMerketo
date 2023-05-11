@@ -90,7 +90,7 @@ button {
         display: flex;
         padding: 10px;
         font-size: 1.2rem;
-        align-items: end;
+        align-items: center;
         height: 100%;
         border: 1px solid black;
         border-radius: 5px;
