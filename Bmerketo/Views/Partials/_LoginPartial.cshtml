@@ -9,6 +9,15 @@
 
 }
 
+else
+{
+	<div class="d-flex flex-column p-2">
+		<a class="link" href="./Login">LOGIN</a>
+		<a class="link" href="./register">REGISTER</a>
+	</div>
+
+}
+
 @if (signInManager.IsSignedIn(User) && User.IsInRole("admin"))
 {
 
@@ -19,12 +28,6 @@
 
 }
 
-else
-{
-	<div class="d-flex flex-column p-2">
-		<a class="link" href="./Login">LOGIN</a>
-		<a class="link" href="./register">REGISTER</a>
-	</div>
 
-}
+
 

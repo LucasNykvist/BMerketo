@@ -3,6 +3,7 @@ using Bmerketo.Models.Entities;
 using Bmerketo.Models.Identity;
 using Bmerketo.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Bmerketo.Services
 {
@@ -11,19 +12,31 @@ namespace Bmerketo.Services
 
 		private readonly UserManager<CustomIdentityUser> _userManager;
 		private readonly IdentityContext _identityContext;
+		private readonly RoleManager<IdentityRole> _roleManager;
+		private readonly SeedService _seedService;
 
-		public AuthService(UserManager<CustomIdentityUser> userManager, IdentityContext identityContext)
+		public AuthService(UserManager<CustomIdentityUser> userManager, IdentityContext identityContext, SeedService service, RoleManager<IdentityRole> roleManager)
 		{
 			_userManager = userManager;
 			_identityContext = identityContext;
+			_seedService = service;
+			_roleManager = roleManager;
 		}
 
 		public async Task<bool> SignUpAsync(UserRegistrationViewModel viewModel)
 		{
 			try
 			{
+				await _seedService.SeedRoles();
+				
+
 				CustomIdentityUser customIdentityUser = viewModel;
 				await _userManager.CreateAsync(customIdentityUser, viewModel.Password);
+
+				if(!await _userManager.Users.AnyAsync())
+					await _userManager.AddToRoleAsync(customIdentityUser, "admin");
+				else
+					await _userManager.AddToRoleAsync(customIdentityUser, "user");
 
 				UserProfileEntity userProfileEntity = viewModel;
 				userProfileEntity.UserID = customIdentityUser.Id;
