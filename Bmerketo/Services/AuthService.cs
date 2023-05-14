@@ -28,15 +28,16 @@ namespace Bmerketo.Services
 			try
 			{
 				await _seedService.SeedRoles();
-				
+				var roleName = "user";
+
+				if (!await _userManager.Users.AnyAsync())
+					roleName = "admin";
+
 
 				CustomIdentityUser customIdentityUser = viewModel;
 				await _userManager.CreateAsync(customIdentityUser, viewModel.Password);
+				await _userManager.AddToRoleAsync(customIdentityUser, roleName);
 
-				if(!await _userManager.Users.AnyAsync())
-					await _userManager.AddToRoleAsync(customIdentityUser, "admin");
-				else
-					await _userManager.AddToRoleAsync(customIdentityUser, "user");
 
 				UserProfileEntity userProfileEntity = viewModel;
 				userProfileEntity.UserID = customIdentityUser.Id;
