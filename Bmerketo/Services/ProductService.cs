@@ -41,5 +41,50 @@ namespace Bmerketo.Services
 
 			return products;
 		}
+
+		public async Task<IEnumerable<ProductModel>> GetNewProductsAsync()
+		{
+			var newProducts = new List<ProductModel>();
+			var items = await _context.Products
+				.Where(p => p.Tags.Any(tag => tag.Name == "New"))
+				.ToListAsync();
+			foreach (var item in items)
+			{
+				ProductModel productModel = item;
+				newProducts.Add(productModel);
+			}
+
+			return newProducts;
+		}
+
+		public async Task<IEnumerable<ProductModel>> GetFeaturedProductsAsync()
+		{
+			var newProducts = new List<ProductModel>();
+			var items = await _context.Products
+				.Where(p => p.Tags.Any(tag => tag.Name == "Featured"))
+				.ToListAsync();
+			foreach (var item in items)
+			{
+				ProductModel productModel = item;
+				newProducts.Add(productModel);
+			}
+
+			return newProducts;
+		}
+
+		public async Task<IEnumerable<ProductModel>> GetPopularProductsAsync()
+		{
+			var newProducts = new List<ProductModel>();
+			var items = await _context.Products
+				.Where(p => p.Tags.Any(tag => tag.Name == "Popular"))
+				.ToListAsync();
+			foreach (var item in items)
+			{
+				ProductModel productModel = item;
+				newProducts.Add(productModel);
+			}
+
+			return newProducts;
+		}
 	}
 }

@@ -13,6 +13,7 @@ namespace Bmerketo.Contexts
 		}
 
 		public DbSet<ProductEntity> Products { get; set; }
+
 		public DbSet<UserProfileEntity> UserProfiles { get; set; }
 
 	}

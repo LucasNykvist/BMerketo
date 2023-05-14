@@ -1,95 +1,32 @@
 ﻿@{
+    var products = await productService.GetPopularProductsAsync();
 }
 
 <section class="best">
     <div class="container">
 
         <div class="top">
-            <h2>Best Collection</h2>
+            <h2>Best Collection (Popular)</h2>
             <p>All / Bags / Dress / Decoration / Essential / Interior / Laptop / Mobile / Beauty</p>
         </div>
 
         <div class="cards">
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
+            @if (products != null)
+            {
+                foreach (var product in products)
+                {
+                    <div class="card">
+                        <img src="@product.Image" alt="">
+                        <div class="bottom">
+                            <div class="title-price">
+                                <div class="card-title">@product.Name</div>
+                                <div class="card-price">@product.Price $</div>
+                            </div>
+                            <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
+                        </div>
                     </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
+                }
+            }
         </div>
 
         <button class="btn-toggle">LOAD MORE <i class="fa-solid fa-rotate-right"></i></button>

@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Bmerketo.Models.Identity;
-using Microsoft.AspNetCore.Identity;
 
 namespace Bmerketo.Models.Entities
 {

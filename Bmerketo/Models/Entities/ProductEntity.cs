@@ -11,6 +11,8 @@ namespace Bmerketo.Models.Entities
 		[Column(TypeName = "money")]
 		public decimal Price { get; set; }
 		public string Image { get; set; } = null!;
+		public ICollection<TagEntity> Tags { get; set; } = new List<TagEntity>();
+
 
 		public static implicit operator ProductModel(ProductEntity entity)
 		{
@@ -21,7 +23,8 @@ namespace Bmerketo.Models.Entities
 				Name = entity?.Name,
 				Description = entity?.Description,
 				Price = entity?.Price,
-				Image= entity?.Image,
+				Image = entity?.Image,
+				Tags = entity?.Tags.Select(tag => tag.Name).ToList(),
 			};
 		}
 	}

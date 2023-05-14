@@ -34,6 +34,17 @@
 				<small><span asp-validation-for="Image" class="text-danger"></span></small>
 			</div>
 
+			<div class="mb-3">
+				<label asp-for="Tags" class="control-label"></label>
+				<select asp-for="Tags" class="form-control" multiple>
+					<option value="New">New</option>
+					<option value="Popular">Popular</option>
+					<option value="Featured">Featured</option>
+				</select>
+				
+				<small><span asp-validation-for="Image" class="text-danger"></span></small>
+			</div>
+
 			<div class="d-grid mt-2">
 				<button type="submit">Create Product</button>
 			</div>

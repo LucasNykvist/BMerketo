@@ -20,12 +20,9 @@ else
 
 @if (signInManager.IsSignedIn(User) && User.IsInRole("admin"))
 {
-
 	<div class="d-flex flex-column p-2">
-		<a asp-action="Index">ADMIN</a>
+		<a asp-controller="Admin" asp-action="Index">ADMIN</a>
 	</div>
-
-
 }
 
 

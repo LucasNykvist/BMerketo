@@ -22,6 +22,10 @@ namespace Bmerketo.ViewModels
 		[Required(ErrorMessage = "Product Image Required")]
 		public string Image { get; set; } = null!;
 
+		[Display(Name = "Product Tag/Tags *")]
+		[Required(ErrorMessage = "Product Tag/Tags Required")]
+		public List<string> Tags { get; set; } = new List<string>();
+
 		public static implicit operator ProductEntity(ProductRegistrationViewModel viewModel)
 		{
 			return new ProductEntity
@@ -29,7 +33,8 @@ namespace Bmerketo.ViewModels
 				Name = viewModel.Name,
 				Description = viewModel.Description,
 				Price = viewModel.Price,
-				Image = viewModel.Image
+				Image = viewModel.Image,
+				Tags = viewModel.Tags.Select(tag => new TagEntity { Name = tag}).ToList(),
 			};
 		}
 	}
