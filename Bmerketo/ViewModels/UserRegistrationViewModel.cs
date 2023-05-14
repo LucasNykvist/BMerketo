@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
+using Bmerketo.Models.Entities;
 using Bmerketo.Models.Identity;
 
 namespace Bmerketo.ViewModels
@@ -26,6 +27,9 @@ namespace Bmerketo.ViewModels
 		[Display(Name = "Phone Number")]
 		public string PhoneNumber { get; set; }
 
+		[Display(Name = "Company")]
+		public string? Company { get; set; } = null!;
+
 		[Display(Name = "Password")]
 		[Required(ErrorMessage = "Password Is Required")]
 		[DataType(DataType.Password)]
@@ -38,13 +42,19 @@ namespace Bmerketo.ViewModels
 		public string ConfirmPassword { get; set; } = null!;
 
 		[Display(Name = "Street name")]
+		[Required(ErrorMessage = "Steet Name Is Required")]
 		public string StreetName { get; set; } = null!;
 
 		[Display(Name = "Postal code")]
+		[Required(ErrorMessage = "Postal Code Is Required")]
 		public string PostalCode { get; set; } = null!;
 
 		[Display(Name = "City")]
+		[Required(ErrorMessage = "City Is Required")]
 		public string City { get; set; } = null!;
+
+		[Display(Name = "Profile Image")]
+		public string? ProfileImageURL { get; set; }
 
 		public static implicit operator CustomIdentityUser(UserRegistrationViewModel viewModel)
 		{
@@ -55,6 +65,22 @@ namespace Bmerketo.ViewModels
 				LastName = viewModel.LastName,
 				Email = viewModel.Email,
 				PhoneNumber = viewModel.PhoneNumber,
+				StreetName = viewModel.StreetName,
+				PostalCode = viewModel.PostalCode,
+				City = viewModel.City,
+				ProfileImageURL = viewModel.ProfileImageURL,
+			};
+		}
+
+		public static implicit operator UserProfileEntity(UserRegistrationViewModel viewModel)
+		{
+			return new UserProfileEntity
+			{
+				FirstName = viewModel.FirstName,
+				LastName = viewModel.LastName,
+				StreetName = viewModel.StreetName,
+				PostalCode = viewModel.PostalCode,
+				City = viewModel.City,
 			};
 		}
 	}

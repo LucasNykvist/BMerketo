@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<IdentityContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("IdentitySql")));
+builder.Services.AddScoped<AuthService>();
 
 builder.Services.AddIdentity<CustomIdentityUser, IdentityRole>(x =>
 {

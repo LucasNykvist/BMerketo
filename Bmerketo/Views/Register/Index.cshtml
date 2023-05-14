@@ -46,6 +46,11 @@
                     <label asp-for="PhoneNumber">Mobile (optional)</label>
                     <input asp-for="PhoneNumber" type="text">
                 </div>
+                <div class="content d-flex flex-column w-50">
+                    <label asp-for="Company">Company (optional)</label>
+                    <input asp-for="Company" type="text">
+                    <small class="text-danger"><span asp-validation-for="Company"></span></small>
+                </div>
 
             </div>
 
@@ -67,6 +72,14 @@
                 <small class="text-danger"><span asp-validation-for="ConfirmPassword"></span></small>
             </div>
 
+            <div class="content flex-column d-flex w-100">
+                <div class="content flex-column d-flex w-100">
+                    <label asp-for="ProfileImageURL">Upload Profile Image (optional)</label>
+                    <input class="w-100" type="text" asp-for="ProfileImageURL">
+                    <small class="text-danger"><span asp-validation-for="ProfileImageURL"></span></small>
+                </div>
+            </div>
+
             <button class="btn-toggle">Submit</button>
 
         </form>
@@ -75,10 +88,7 @@
 <!-- Register End -->
 
 <!--Saved Code
-                    <div class="content d-flex flex-column w-50">
-                    <label for="company">Company (optional)</label>
-                    <input type="text">
-                </div>
+
 
                             <div class="content flex-column d-flex w-100">
                 <label for="upload image">Upload Profile Image (optional)</label>

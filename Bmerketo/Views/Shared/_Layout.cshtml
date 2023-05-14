@@ -13,6 +13,8 @@
 <body>
 
         <header>
+
+        <partial name="/Views/Partials/_LoginPartial.cshtml" />
         <div class="container">
             
             <img class="logo" src="images/Logo.svg" alt="">
@@ -27,7 +29,6 @@
 
                 <nav class="menu-icons d-flex px-2">
                     <a class="link" asp-controller="Login" asp-action="Index"><i class="fa-regular fa-search"></i></a>
-                    <partial name="/Views/Partials/_LoginPartial.cshtml" />
                     <a class="link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                 </nav>
 

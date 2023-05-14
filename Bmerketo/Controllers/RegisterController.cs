@@ -1,5 +1,7 @@
 ﻿using Bmerketo.Models.Identity;
+using Bmerketo.Services;
 using Bmerketo.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,12 +9,13 @@ namespace Bmerketo.Controllers
 {
     public class RegisterController : Controller
     {
-        private readonly UserManager<CustomIdentityUser> _userManager;
 
-        public RegisterController(UserManager<CustomIdentityUser> userManager)
-        {
-            _userManager = userManager;
-        }
+        private readonly AuthService _auth;
+
+		public RegisterController(AuthService auth)
+		{
+			_auth = auth;
+		}
 
         [HttpGet]
         public IActionResult Index()
@@ -22,22 +25,16 @@ namespace Bmerketo.Controllers
         }
 
 
-        [HttpPost]
+		[HttpPost]
 		public async Task<IActionResult> Index(UserRegistrationViewModel viewModel)
 		{
 
             if(ModelState.IsValid)
             {
+                if(await _auth.SignUpAsync(viewModel))
+                    return RedirectToAction("Index", "Login");
 
-                if (await _userManager.FindByNameAsync(viewModel.Email) == null)
-                {
-                    var result = await _userManager.CreateAsync(viewModel, viewModel.Password);
-                    if(result.Succeeded)
-                        return RedirectToAction("Index", "Login");
-                }
-
- 
-                   ModelState.AddModelError("","A user with the same E-mail already exists");
+                 ModelState.AddModelError("","A user with the same E-mail already exists");
             }
 
 			return View(viewModel);
