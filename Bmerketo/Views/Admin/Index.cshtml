@@ -19,10 +19,10 @@
 				foreach (var user in users)
 				{
 					<div class="users-card border d-flex">
-						<p class="border w-25 p-2 m-0">User: @user.Email</p>
-						<p class="border w-25 p-2 m-0">First Name: @user.FirstName</p>
-						<p class="border w-25 p-2 m-0">Last Name: @user.LastName</p>
-						<p class="border w-25 p-2 m-0">Role: admin</p>
+						<p class="border w-25 p-2 m-0">User: @user.UserName.ToUpper()</p>
+						<p class="border w-25 p-2 m-0">First Name: @user.FirstName.ToUpper()</p>
+						<p class="border w-25 p-2 m-0">Last Name: @user.LastName.ToUpper()</p>
+						<p class="border w-25 p-2 m-0">Role: @user.Role.ToUpper()</p>
 					</div>
 				}
 			}

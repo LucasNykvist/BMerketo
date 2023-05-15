@@ -22,5 +22,7 @@ namespace Bmerketo.Models.Identity
 		public string StreetName { get; set; } = null!;
 
 		public string? ProfileImageURL { get; set; } = null!;
+
+		public string? Role { get; set; } = null!;	
 	}
 }
