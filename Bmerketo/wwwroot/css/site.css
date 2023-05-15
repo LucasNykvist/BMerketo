@@ -593,12 +593,24 @@ footer {
 
         .product .container .product-images .top-image {
             margin-bottom: 7px;
+            object-fit:contain;
+        }
+        .product .container .product-images .top-image img {
+            width: 501px;
+            height: 430px;
+            object-fit:contain;
         }
 
         .product .container .product-images .bottom-images {
             display: flex;
             gap: 7px;
         }
+
+            .product .container .product-images .bottom-images img {
+                width: 120px;
+                height: 113px;
+                object-fit: contain;
+            }
 
     .product .container .product-information {
         width: 60%;

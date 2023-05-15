@@ -2,6 +2,7 @@
 using Bmerketo.Models;
 using Bmerketo.Models.Entities;
 using Bmerketo.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bmerketo.Services
@@ -86,5 +87,18 @@ namespace Bmerketo.Services
 
 			return newProducts;
 		}
+
+		public async Task<ProductModel> GetProductDetailsAsync(int id)
+		{
+			var detailedProduct = await _context.Products.FindAsync(id);
+
+			if(detailedProduct == null) 
+			{
+				return null;
+			}
+
+			return detailedProduct;
+		}
+
 	}
 }

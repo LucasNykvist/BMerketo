@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Bmerketo.Models;
+@model ProductModel
+@{
 }
 
 <!-- Advert Start -->
@@ -15,19 +17,20 @@
     <div class="container">
         <div class="product-images">
             <div class="top-image">
-                <img src="./images/501x430.svg" alt="">
+                <img src="@Model.Image" alt="">
             </div>
             <div class="bottom-images">
-                <img src="./images/120x113.svg" alt="">
-                <img src="./images/120x113.svg" alt="">
-                <img src="./images/120x113.svg" alt="">
-                <img src="./images/120x113.svg" alt="">
+                <img src="@Model.Image" alt="">
+                <img src="@Model.Image" alt="">
+                <img src="@Model.Image" alt="">
+                <img src="@Model.Image" alt="">
+
             </div>
         </div>
         <div class="product-information">
             <div class="info-top">
-                <h2>Young Star Smart Shoe in Fashion</h2>
-                <p>Lirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <h2>@Model.Name</h2>
+                <p>@Model.Description</p>
             </div>
             <div class="info-bottom">
                 <ul>
@@ -39,7 +42,7 @@
                     <p>16 Reviews</p>
                 </ul>
 
-                <h3 class="price">$30</h3>
+                <h3 class="price">@Model.Price $</h3>
 
                 <div class="add-cart">
                     <div class="quantity">
@@ -61,7 +64,7 @@
 
                 <button class="btn-toggle wishlist">Add To Wishlist</button>
 
-                <p class="category">Category: Table Lamp, Light</p>
+                <p class="category">Category: Category</p>
 
             </div>
         </div>
