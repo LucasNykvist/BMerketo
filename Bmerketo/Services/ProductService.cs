@@ -2,7 +2,6 @@
 using Bmerketo.Models;
 using Bmerketo.Models.Entities;
 using Bmerketo.ViewModels;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bmerketo.Services

@@ -1,9 +1,33 @@
 ﻿@{
 	ViewData["Title"] = "Admin Dashboard";
+
+	var users = await userService.GetAllUsersAsync();
 }
 
-<section class="container">
-	<div class="admin-title border-top d-flex justify-content-center w-100">
-		<h1 class="mt-2 mb-2 d-flex justify-content-center">Admin Dashboard</h1>
+<section class="admin-dashboard">
+	<div class="container">
+
+		<div class="admin-title border-top d-flex justify-content-center w-100">
+			<h1 class="mt-2 mb-2 d-flex justify-content-center">Admin Dashboard</h1>
+		</div>
+
+		<div class="admin-users border">
+			<h4 class="">All Users</h4>
+
+			@if(users != null)
+			{
+				foreach (var user in users)
+				{
+					<div class="users-card border d-flex">
+						<p class="border w-25 p-2 m-0">User: @user.Email</p>
+						<p class="border w-25 p-2 m-0">First Name: @user.FirstName</p>
+						<p class="border w-25 p-2 m-0">Last Name: @user.LastName</p>
+						<p class="border w-25 p-2 m-0">Role: admin</p>
+					</div>
+				}
+			}
+
+		</div>
 	</div>
+
 </section>

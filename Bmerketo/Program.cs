@@ -18,6 +18,7 @@ builder.Services.AddIdentity<CustomIdentityUser, IdentityRole>(x =>
 }).AddEntityFrameworkStores<IdentityContext>();
 
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 app.UseHsts();
