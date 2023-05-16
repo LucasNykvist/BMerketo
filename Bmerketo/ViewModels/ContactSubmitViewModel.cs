@@ -35,6 +35,5 @@ namespace Bmerketo.ViewModels
 				Comment = viewModel.Comment,
 			};
 		}
-
 	}
 }

@@ -19,6 +19,7 @@ builder.Services.AddIdentity<CustomIdentityUser, IdentityRole>(x =>
 
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ContactService>();
 
 var app = builder.Build();
 app.UseHsts();
