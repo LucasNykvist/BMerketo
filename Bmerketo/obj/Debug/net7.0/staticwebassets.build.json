@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "O3A12/SN0Ep/WPCnPftSSXu3kYUJCCStbeSBGuwvysg=",
+  "Hash": "x+6hNcEpSG0rv2ypJhMCggcLila5Hg0GhNuxJu4swUY=",
   "Source": "Bmerketo",
   "BasePath": "_content/Bmerketo",
   "Mode": "Default",
@@ -1258,12 +1258,12 @@
       "OriginalItemSpec": "wwwroot\\images\\625x647.svg"
     },
     {
-      "Identity": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\Add your image here.svg",
+      "Identity": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\Advert.svg",
       "SourceId": "Bmerketo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\",
       "BasePath": "_content/Bmerketo",
-      "RelativePath": "images/Add your image here.svg",
+      "RelativePath": "images/Advert.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1272,7 +1272,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Add your image here.svg"
+      "OriginalItemSpec": "wwwroot\\images\\Advert.svg"
     },
     {
       "Identity": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\Logo.svg",
