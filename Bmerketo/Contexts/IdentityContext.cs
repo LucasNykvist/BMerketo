@@ -16,5 +16,7 @@ namespace Bmerketo.Contexts
 
 		public DbSet<UserProfileEntity> UserProfiles { get; set; }
 
+		public DbSet<ContactEntity> ContactInformation { get; set; }
+
 	}
 }
