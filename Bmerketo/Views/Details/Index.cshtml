@@ -1,6 +1,8 @@
 ﻿@using Bmerketo.Models;
 @model ProductModel
+
 @{
+    var products = await productService.GetAllAsync();
 }
 
 <!-- Advert Start -->
@@ -12,6 +14,7 @@
     </div>
 </section>
 <!-- Advert End -->
+
 <!-- Product Start -->
 <section class="product mt-5 mb-5">
     <div class="container">
@@ -71,6 +74,7 @@
     </div>
 </section>
 <!-- Product End -->
+
 <!-- Description Start -->
 <section class="description mt-3">
     <div class="container">
@@ -95,55 +99,42 @@
     </div>
 </section>
 <!-- Description End -->
+
 <!-- Related Start -->
 <section class="related">
     <div class="container">
         <h2>Related Products</h2>
         <div class="cards">
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/270x295.svg" alt="">
-                <div class="bottom">
-                    <div class="title-price">
-                        <div class="card-title">Apple Watch Series</div>
-                        <div class="card-price">$30.00</div>
-                    </div>
-                    <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
-                </div>
-            </div>
+            @if (products != null)
+            {
+                int count = 0;
+
+                foreach (var product in products)
+                {
+                    if(count < 4)
+                    {
+                        <div class="card">
+                            <a href="@Url.Action("Index", "details", new { id = product.Id})">
+                                <img src="@product.Image" alt="">
+                            </a>
+                            <div class="bottom">
+                                <div class="title-price">
+                                    <div class="card-title">@product.Name</div>
+                                    <div class="card-price">@product.Price $</div>
+                                </div>
+                                <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                        count++;
+                    }
+                }
+            }
         </div>
     </div>
 </section>
 <!-- Related End -->
+
+
 <!-- Extra Start -->
 <div class="extra">
     <div class="container">
