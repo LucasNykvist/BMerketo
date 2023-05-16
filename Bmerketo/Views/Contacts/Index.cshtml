@@ -10,44 +10,51 @@
 <div class="contact-box">
     <div class="container">
 
-        <form method="post" class="contact-form" action="">
+        <form method="post" class="contact-form">
             <p>Write Something</p>
+            <div asp-validation-summary="ModelOnly"></div>
+
             <div class="top">
                 <div class="input-field">
-                    <label for="Name">Your Name*</label>
-                    <input type="text" required>
+                    <label asp-for="Name">Your Name*</label>
+                    <input asp-for="Name" type="text" required>
+                    <small class="text-danger"><span asp-validation-for="Name"></span></small>
                 </div>
 
                 <div class="input-field">
-                    <label for="email">Your Email*</label>
-                    <input type="email" required>
+                    <label asp-for="Email">Your Email*</label>
+                    <input asp-for="Email" type="email" required>
+                    <small class="text-danger"><span asp-validation-for="Email"></span></small>
                 </div>
 
             </div>
             <div class="mid">
 
                 <div class="input-field">
-                    <label for="number">Phone Number*</label>
-                    <input type="tel" required>
+                    <label asp-for="Phone">Phone Number*</label>
+                    <input asp-for="Phone" type="tel" required>
+                    <small class="text-danger"><span asp-validation-for="Phone"></span></small>
                 </div>
                 <div class="input-field">
-                    <label for="company">Company (optional)</label>
-                    <input type="text">
+                    <label asp-for="Company">Company (optional)</label>
+                    <input asp-for="Company" type="text">
+                    <small class="text-danger"><span asp-validation-for="Company"></span></small>
                 </div>
 
             </div>
             <div class="bot">
                 <div class="comment-field">
-                    <label for="comment">Comment</label>
-                    <textarea class="text" type="text" required></textarea>
+                    <label asp-for="Comment">Comment</label>
+                    <textarea asp-for="Comment" class="text" type="text" required></textarea>
                     <div class="checkbox">
-                        <input class="box" type="checkbox">
+                        <input class="box" type="checkbox" disabled>
                         <p>Save my name, email, and website in this browser for the next time I comment.</p>
                     </div>
                 </div>
             </div>
             <button class="btn-toggle">Submit</button>
         </form>
+
     </div>
 </div>
 <!-- Contact Form End -->
