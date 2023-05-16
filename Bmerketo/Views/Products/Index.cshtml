@@ -12,7 +12,9 @@
 			foreach (var product in products)
 			{
 				<div class="card m-1">
-					<img src="@product.Image" alt="">
+					<a href="@Url.Action("Index", "details", new { id = product.Id})">
+						<img src="@product.Image" alt="">
+					</a>
 					<div class="bottom">
 						<div class="title-price">
 							<div class="card-title">@product.Name</div>
