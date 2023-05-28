@@ -5,7 +5,6 @@
 
 <section class="top-selling">
     <div class="container d-flex">
-
         <div class="title">Top selling products in this week (Featured)</div>
         <div class="cards">
             @if (featured != null)
@@ -28,12 +27,13 @@
             }
     </div>
 
-        <div class="navigator d-flex flex-row justify-content-center">
+        <div class="navigator d-flex flex-row justify-content-center gap-2">
             <button class="left"><i class="fa-regular fa-chevron-left"></i></button>
             <button class="right"><i class="fa-regular fa-chevron-right"></i></button>
         </div>
 
-        <div class="large-cards d-flex justify-content-center">
+        <div class="large-cards gap-2 d-flex justify-content-center">
+            <p>(New)</p>
                 @if (newProducts != null)
                 {
                     foreach (var newProduct in newProducts)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "x+6hNcEpSG0rv2ypJhMCggcLila5Hg0GhNuxJu4swUY=",
+  "Hash": "M1FO02RkcPlmb03unz8e0w6vbp2i4/gxgt+58/s6cP8=",
   "Source": "Bmerketo",
   "BasePath": "_content/Bmerketo",
   "Mode": "Default",
@@ -1258,6 +1258,23 @@
       "OriginalItemSpec": "wwwroot\\images\\625x647.svg"
     },
     {
+      "Identity": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\Add your image here.png",
+      "SourceId": "Bmerketo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\",
+      "BasePath": "_content/Bmerketo",
+      "RelativePath": "images/Add your image here.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Add your image here.png"
+    },
+    {
       "Identity": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\Advert.svg",
       "SourceId": "Bmerketo",
       "SourceType": "Discovered",
@@ -1273,6 +1290,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Advert.svg"
+    },
+    {
+      "Identity": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\Hero bannar.png",
+      "SourceId": "Bmerketo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\",
+      "BasePath": "_content/Bmerketo",
+      "RelativePath": "images/Hero bannar.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Hero bannar.png"
     },
     {
       "Identity": "C:\\Users\\lukep\\Desktop\\Bmerketo ASP\\Bmerketo\\wwwroot\\images\\Logo.svg",
