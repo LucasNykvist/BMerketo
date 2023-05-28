@@ -9,8 +9,11 @@
         <div class="cards">
             @if (featured != null)
             {
+                int count = 0;
                 foreach (var features in featured)
                 {
+                    if (count < 6)
+                    {
                     <div class="card">
                         <a href="@Url.Action("Index", "details", new { id = features.Id})">
                             <img src="@features.Image" alt="">
@@ -23,6 +26,8 @@
                             <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
                         </div>
                     </div>
+                        count++;
+                    }
                 }
             }
     </div>
@@ -36,9 +41,12 @@
             <p>(New)</p>
                 @if (newProducts != null)
                 {
+                int count = 0;
                     foreach (var newProduct in newProducts)
                     {
-                        <div class="large-card">
+                    if(count < 3)
+                    {
+                    <div class="large-card">
                             <div class="top">
                             <a href="@Url.Action("Index", "details", new { id = newProduct.Id})">
                                 <img src="@newProduct.Image" alt="">
@@ -52,6 +60,8 @@
                                 </div>
                             </div>
                         </div>
+                        count++;
+                    }
                     }
                 }
 

@@ -18,7 +18,7 @@ namespace Bmerketo.ViewModels
 		[DataType(DataType.Currency)]
 		public decimal Price { get; set; }
 
-		[Display(Name = "Product Image *")]
+		[Display(Name = "Product Image URL *")]
 		[Required(ErrorMessage = "Product Image Required")]
 		public string Image { get; set; } = null!;
 

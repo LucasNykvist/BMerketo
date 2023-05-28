@@ -11,7 +11,7 @@
 			<h1 class="mt-2 mb-2 d-flex justify-content-center">Admin Dashboard</h1>
 		</div>
 
-		<div class="admin-users border">
+		<div class="admin-users border mb-2">
 			<h4 class="">All Users</h4>
 
 			@if(users != null)
@@ -28,6 +28,8 @@
 			}
 
 		</div>
+
+		<a class="link" asp-controller="Products" asp-action="Register">REGISTER PRODUCTS</a>
 	</div>
 
 </section>

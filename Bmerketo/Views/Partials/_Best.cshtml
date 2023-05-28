@@ -13,8 +13,13 @@
         <div class="cards">
             @if (products != null)
             {
+
+                int count = 0;
+
                 foreach (var product in products)
                 {
+                    if (count < 8)
+                    {
                     <div class="card">
                         <a href="@Url.Action("Index", "details", new { id = product.Id})">
                             <img src="@product.Image" alt="">
@@ -27,6 +32,8 @@
                             <button class="add-cart"><i class="fa-regular fa-cart-plus"></i></button>
                         </div>
                     </div>
+                        count++;
+                    }
                 }
             }
         </div>

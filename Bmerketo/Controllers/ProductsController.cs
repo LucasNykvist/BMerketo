@@ -1,12 +1,16 @@
 ﻿using Bmerketo.Services;
 using Bmerketo.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bmerketo.Controllers
 {
+	[Authorize(Roles = "admin")]
 	public class ProductsController : Controller
 	{
 		private readonly ProductService _productService;
+
+		
 
 		public ProductsController(ProductService productService)
 		{
